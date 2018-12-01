@@ -2,8 +2,8 @@ __C# Struct: comparison of Default Equality and GetHashCode Functions__
 
 __TL;DR__
 
--Default equality comparators are ~10 times slower than their respective IEquatable<T> implementations. 
--When using a struct in collections like HashSet, provide IEquatable implementation for the struct. 
++ Default equality comparators are ~10 times slower than their respective IEquatable<T> implementations. 
++ When using a struct in collections like HashSet, provide IEquatable implementation for the struct. 
 
 __Background__
 
