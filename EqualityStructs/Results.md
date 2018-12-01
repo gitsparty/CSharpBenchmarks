@@ -8,7 +8,7 @@ __Background__
 
 These measurments are based on a blog article by Sergey Teplyakov. See https://blogs.msdn.microsoft.com/seteplia/2018/07/17/performance-implications-of-default-struct-equality-in-c/. 
 
-The article points out that the default implementation of equality operator and GetHashCode function in a C# struct is sub optimal at best and unpredictable at worse. These measurments
+The article points out that the default implementation of equality operator and GetHashCode function in a C# struct is sub optimal at best and unpredictable at worst. These measurments
 breakout the performance of GetHashCode vs. Equality operator. 
 
 __Peformance of Default Equality Operator (Equality Benchmark)__
@@ -24,7 +24,7 @@ Default equality comparators are ~10 times slower than their respective IEquatab
 
 __Peformance of Default GetHashCode Implementation (HashSet Benchmark)__
 
-When a struct gets used in a HashSet, GetHashCode should distribute the hashcode evenly among all elements in the 
+When a struct gets used in a HashSet, GetHashCode should distribute the hash evenly among all elements in the 
 set. GuidFirstSameTenant does't distribute the hashcode evenly. GuidFirstWithEquatableSameTenant does. The 
 performance difference between the two is around 17 times. 
 
