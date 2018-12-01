@@ -2,7 +2,7 @@ __C# Struts: Comparision of Default Equality and GetHashCode Functions__
 
 __TL;DR__
 
-When you use a struct, especially when using it in collections like HashSet, etc., provide IEquatable<T> implementation for the set. 
+When you use a struct, especially when using it in collections like HashSet, etc., provide IEquatable<T> implementation for the struct. 
 
 __Background__
 
