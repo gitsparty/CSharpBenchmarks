@@ -17,7 +17,7 @@ __Peformance of default Equality Operator (Equality Benchmark)__
 
 Default equality comparators (#1 and #2 below) are ~10 times slower than the IEquatable<T> implementation (#3 below). 
 
-#   |                          Method |  N |        Mean |      Error |       StdDev |      Median | Rank |
+No  |                          Method |  N |        Mean |      Error |       StdDev |      Median | Rank |
 --- |-------------------------------- |--- |------------:|-----------:|-------------:|------------:|-----:|
 1   |                     StringFirst | 10 | 12,466.6 ns | 605.278 ns | 1,784.677 ns | 12,454.8 ns |    4 |
 2   |                       GuidFirst | 10 | 11,739.2 ns | 510.061 ns | 1,503.928 ns | 12,014.4 ns |    3 |
@@ -30,7 +30,7 @@ When a struct gets used in a HashSet, GetHashCode should distribute the hash eve
 set. GuidFirstSameTenant (#4) -- which has the default GetHashCode implementation -- does't distribute 
 the hashcode evenly. GuidFirstWithEquatableSameTenant (#7) does. The performance difference between the two is around 17 times. 
 
-#   |                                    Method |  N |       Mean |     Error |    StdDev |     Median | Rank |
+No  |                                    Method |  N |       Mean |     Error |    StdDev |     Median | Rank |
 --- |------------------------------------------ |--- |-----------:|----------:|----------:|-----------:|-----:|
 1   |                               StringFirst | 10 |  11.278 us | 0.4549 us |  1.222 us |  11.652 us |    3 |
 2   |                                 GuidFirst | 10 |  16.132 us | 0.6257 us |  1.845 us |  15.849 us |    4 |
